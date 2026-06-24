@@ -1,0 +1,23 @@
+name: ScribeBar
+options:
+  bundleIdPrefix: app.scribebar
+targets:
+  ScribeBar:
+    type: application
+    platform: macOS
+    deploymentTarget: "14.0"
+    sources:
+      - path: ScribeBar
+    info:
+      path: ScribeBar/Resources/Info.plist
+      properties:
+        LSUIElement: true
+    entitlements:
+      path: ScribeBar/ScribeBar.entitlements
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: app.scribebar.ScribeBar
+        CODE_SIGN_ENTITLEMENTS: ScribeBar/ScribeBar.entitlements
+        ENABLE_HARDENED_RUNTIME: true
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        SWIFT_VERSION: 5.0
