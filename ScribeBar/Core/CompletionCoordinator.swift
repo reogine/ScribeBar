@@ -18,7 +18,8 @@ class CompletionCoordinator {
             object: nil,
             queue: .main
         ) { [weak self] notification in
-            guard let element = notification.object as? AXUIElement else { return }
+            guard let object = notification.object else { return }
+            let element = object as! AXUIElement
             
             // Immediately hide overlay if user is typing
             self?.overlayWindow.hide()
