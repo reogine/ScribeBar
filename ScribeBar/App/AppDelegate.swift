@@ -6,6 +6,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var popover: NSPopover?
 
     func applicationDidFinishLaunching(_ notification: Notification) {
+        // Initialize Core systems
+        _ = AXManager.shared
+        _ = CompletionCoordinator.shared
+        
         // Create the status item in the menu bar
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         
